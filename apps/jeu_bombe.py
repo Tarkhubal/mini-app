@@ -1,19 +1,15 @@
 # Formule de bienvenue
-
 print("\n\n" + '{:━^61}'.format(' Bienvenue Agent 008 ! '))
 
-# Imports
-
+# Importation de bibliothèques
 from random import *
 from time import *
 
 # Initialiser les variables
-
 user_co = 0
 essaie = 5
 
 # Fonctions
-
 def explode ():
     print("Vous n'avez pas trouvé la bombe !\nAttention ! La bombe va exploser !!")
     sleep(1)
@@ -24,7 +20,6 @@ def explode ():
     print("1\nBOOM ! La bombe était placée en " + str(bombe) + " !")
     
 # Choix de la difficulté
-
 lvl_choice = int(input("Choisissons le niveau de difficulté de la partie !\nNiveau 1 : la bombe est cachée dans un interval de 21 nombres\nNiveau 2 : la bombe est cachée dans un interval de 11 nombres\nNiveau 3 : la bombe est cachée dans un interval de 5 nombres\nNiveau 4 : choissisez vous-même votre interval !\n\nEntrez votre niveau de difficulté (1, 2, 3 ou 4) ici : "))
 if lvl_choice == 1:
     i = 10
@@ -38,13 +33,11 @@ else:
     print("\n\n\nMerci d'entrer un nombre entre 1 et 4.")
 
 # Choix du nombre de joueurs
-
 nb_joueur = int(input("Entrez le nombre de joueurs (1 ou 2): "))
 while nb_joueur != 1 and nb_joueur != 2:
     nb_joueur = int(input("Merci d'entrer soit 1 soit 2 : "))
 
 # Génération de la bombe
-
 bombe = randint(0, 100)
 print("Trouvez la bombe !")
 
@@ -52,12 +45,10 @@ print("Trouvez la bombe !")
 #print(bombe)
 
 # Génération de l'interval de la bombe
-
 l_co_bombe_min = bombe - i
 l_co_bombe_max = bombe + i
 
 # Mode solo
-
 if nb_joueur == 1:
     while essaie == 5 or essaie == 4 or essaie == 3 or essaie == 2 or essaie == 1:
         user_co = int(input("Entrez un nombre entre 0 et 100 : "))
@@ -76,8 +67,8 @@ if nb_joueur == 1:
     else:
         print("La bombe était placée en " + str(bombe) + " !")
 
-# Mode deux joueurs
 
+# Mode deux joueurs
 elif nb_joueur == 2:
     essaie_1 = 5
     essaie_2 = 5
@@ -111,8 +102,9 @@ elif nb_joueur == 2:
             print("Raté joueur " + str(joueur_numero) + " ! Il te reste", str(essaie_2-1), "tentatives !")
             essaie_2 -= 1
         
-        # Si les deux joueurs n'ont pas trouvé :
         
+    
+        # Si les deux joueurs n'ont pas trouvé :
         if essaie_1 == 0 or essaie_2 == 0:
             explode()
             break

@@ -1,27 +1,9 @@
-play = 0
-print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-print("Bienvenue sur l'application pourcentages !")
+# Formule de bienvenue
+print("\n\n" + '{:━^61}'.format(" Calculons des pourcentages ! "))
 
-while play != 1:
-    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    print("\nQuelle est ta quantité ?")
-    nb1 = int(input())
+# Demande des valeurs
+nbq = int(input("Quelle est ta quantité ? "))
+nbtotal = int(input("Quel est ton total ? "))
 
-    print("Quel est ton total?")
-    nbtotal = int(input())
-
-    print("Ton résultat est de ", end="")
-    print((nb1 / nbtotal) * 100, end="")
-    print("%")
-
-    print(
-        "----------------------------------------------------------------------------------------------------"
-    )
-    print(
-        "Pour stopper le programme, entrez [0], si vous souhaitez continuer sur cette application, entrez [1]"
-    )
-    c = int(input())
-    if c == 0:
-        play = 1
-
-play = 0
+# Calcul et impression à l'écran
+print("Ton résultat est de " + str((nbq / nbtotal) * 100) + "%")

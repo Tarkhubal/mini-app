@@ -1,7 +1,12 @@
+# Formule de bienvenue
+print("\n\n" + '{:━^61}'.format(' Révisons nos tables de multiplication ! '))
+
+# Importation de bibliothèques
 from random import *
+
+# Initialisation des variables
 score = 0
 
-print("Révisons nos tables de multiplication !")
 for loop in range(10):
     a = randint(1, 10)
     b = randint(1, 10)
