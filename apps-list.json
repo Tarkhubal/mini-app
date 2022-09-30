@@ -1,0 +1,28 @@
+{
+    "apps": {
+        "dollar_can": {
+            "app_id": 1,
+            "name": "Convertisseur de devises monnetaire",
+            "description": "Une petite application qui permet de créer un tableau de conversion entre différentes devises monnetaires !",
+            "category": "Utility",
+            "menu_desc": "Générer un tableau de conversion de monnaies",
+            "multiplayer": false
+        },
+        "age_calculator": {
+            "app_id": 2,
+            "name": "Générateur de présentation",
+            "description": "Réponds aux questions du programme pour que celui-ci te confectionne une belle présentation de toi !",
+            "category": "Utility",
+            "menu_desc": "Générer une présentation de toi",
+            "multiplayer": false
+        },
+        "jeu_bombe": {
+            "app_id": 3,
+            "name": "Jeu de la bombe",
+            "description": "Une bombe est cachée à des coordonnées secrètes !\nAgent 008, votre mission si vous l'acceptez est de retrouver cette bombe et de la désamorcer !",
+            "category": "Game",
+            "menu_desc": "Jouer au jeu de la bombe !",
+            "multiplayer": true
+        }
+    }
+}
