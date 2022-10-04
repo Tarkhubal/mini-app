@@ -1,5 +1,6 @@
 # ━
 for loop in range(50):
+    user = 0
     bienvenue = "\n\n" + '{:━^61}'.format(' Bienvenue à toi !') + "\nTu es actuellement dans le menu de l'application !\nQue souhaites-tu faire ?"
 
     print(bienvenue + "\n1 - Jouer au jeu de la bombe\n2 - Générer une présentation de toi\n3 - Trouver combien de fois un nombre est divisible par 2\n4 - Réviser tes tables de multiplication\n5 - Générer un tableau de conversion de monnaies\n6 - Calculons des pourcentages !\n9 - Quitter l'application")

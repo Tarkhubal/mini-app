@@ -1,3 +1,6 @@
+# Formule de bienvenue (pour la présentation)
+print("\n\n" + '{:━^61}'.format(' Et si on convertissait des monnaies ? '))
+
 dollar = 1.65
 euros = 1
 n = 1

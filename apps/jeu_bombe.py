@@ -1,4 +1,4 @@
-# Formule de bienvenue
+# Formule de présentation (pour la présentation)
 print("\n\n" + '{:━^61}'.format(' Bienvenue Agent 008 ! '))
 
 # Importation de bibliothèques
@@ -18,22 +18,28 @@ def explode ():
     print("2")
     sleep(1)
     print("1\nBOOM ! La bombe était placée en " + str(bombe) + " !")
+
+# On demande à l'utilisateur d'entrer un nombre entre 1  et 4 inclus)
+while lvl_choice != 1 and lvl_choice != 2 and lvl_choice != 3 and lvl_choice != 4:
+    # On demande à l'utilisateur de choisir une difficultée
+    lvl_choice = int(input("Choisissons le niveau de difficulté de la partie !\nNiveau 1 : la bombe est cachée dans un interval de 21 nombres\nNiveau 2 : la bombe est cachée dans un interval de 11 nombres\nNiveau 3 : la bombe est cachée dans un interval de 5 nombres\nNiveau 4 : choissisez vous-même votre interval !\n\nEntrez votre niveau de difficulté (1, 2, 3 ou 4) ici : "))
     
-# Choix de la difficulté
-lvl_choice = int(input("Choisissons le niveau de difficulté de la partie !\nNiveau 1 : la bombe est cachée dans un interval de 21 nombres\nNiveau 2 : la bombe est cachée dans un interval de 11 nombres\nNiveau 3 : la bombe est cachée dans un interval de 5 nombres\nNiveau 4 : choissisez vous-même votre interval !\n\nEntrez votre niveau de difficulté (1, 2, 3 ou 4) ici : "))
-if lvl_choice == 1:
-    i = 10
-elif lvl_choice == 2:
-    i = 5
-elif lvl_choice == 3:
-    i = 2
-elif lvl_choice == 4:
-    i = int(input("Choisissez maintenant la taille de l'interval (nombre pair) : "))/2
-else:
-    print("\n\n\nMerci d'entrer un nombre entre 1 et 4.")
+    # On fixe l'interval des nombres en fonction du niveau de difficulté que l'utilisateur a choisit
+    if lvl_choice == 1:
+        i = 10
+    elif lvl_choice == 2:
+        i = 5
+    elif lvl_choice == 3:
+        i = 2
+    elif lvl_choice == 4:
+        i = int(input("Choisissez maintenant la taille de l'interval (nombre pair) : "))/2
+    else:
+        print("\n\n\nMerci d'entrer un nombre entre 1 et 4.")
 
 # Choix du nombre de joueurs
 nb_joueur = int(input("Entrez le nombre de joueurs (1 ou 2): "))
+
+# On demande à l'uilisateur d'entrer un nombre (soit 1 soit 2) et on continue jusqu'à ce qu'il le fasse
 while nb_joueur != 1 and nb_joueur != 2:
     nb_joueur = int(input("Merci d'entrer soit 1 soit 2 : "))
 
@@ -102,11 +108,9 @@ elif nb_joueur == 2:
             print("Raté joueur " + str(joueur_numero) + " ! Il te reste", str(essaie_2-1), "tentatives !")
             essaie_2 -= 1
         
-        
     
         # Si les deux joueurs n'ont pas trouvé :
         if essaie_1 == 0 or essaie_2 == 0:
             explode()
             break
     print("La bombe était placée en " + str(bombe) + " !")
-        

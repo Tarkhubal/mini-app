@@ -1,4 +1,4 @@
-# Formule de bienvenue
+# Formule de bienvenue (pour la présentation)
 print("\n\n" + '{:━^61}'.format(' Déterminons si ton nombre est divisible par 2 ! '))
 
 # On demande à l'utilisateur de rentrer un nombre entier strictement positif
@@ -7,7 +7,7 @@ n = int(input("Entre un entier strictement positif : "))
 while n < 1:
     n = int(input("Entre un entier STRICTEMENT POSITIF s'il te plait : "))
 
-# On initialise les variables et on sauegarde le nombre de départ
+# On initialise les variables et on sauvegarde le nombre de départ
 nbdonne_save = n
 comptage = 0
 

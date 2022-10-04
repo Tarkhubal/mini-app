@@ -1,4 +1,4 @@
-# Formule de bienvenue
+# Formule de bienvenue (pour la présentation)
 print("\n\n" + '{:━^61}'.format(" Calculons des pourcentages ! "))
 
 # Demande des valeurs
