@@ -23,3 +23,6 @@ if comptage == 0:
     print(str(nbdonne_save) + " n'est pas divisible par 2.")
 else:
     print(str(nbdonne_save) + " est " + str(comptage) + " fois divisible par 2.")
+
+# Formule de au revoir (pour la présentation)
+print('{:━^61}'.format(''))

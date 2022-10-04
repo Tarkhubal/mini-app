@@ -1,4 +1,4 @@
-# Formule de présentation (pour la présentation)
+# Formule de bienvenue (pour la présentation)
 print("\n\n" + '{:━^61}'.format(' Générons une présentation de toi ! '))
 
 # On génère les variables
@@ -18,5 +18,5 @@ age = 2022 - annee_naissance
 # On affiche une phrase type "Bonjour Thomas BLANC, vous avez 16 ans."
 print("Bonjour " + prenom + " " + nom + ", vous avez " + str(age) + " ans.")
 
-# 
+# Formule de au revoir (pour la présentation)
 print('{:━^61}'.format(''))

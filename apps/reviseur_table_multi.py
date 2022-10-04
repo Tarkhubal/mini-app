@@ -8,6 +8,7 @@ from random import *
 score = 0   # Score du joueur
 a = 0       # Nombre 1
 b = 0       # Nombre 2
+answer = 0  # Réponse du joueur
 
 # On génère une boucle pour que le programme pose 10 questions
 for loop in range(10):
@@ -15,11 +16,12 @@ for loop in range(10):
     a = randint(1, 10)
     b = randint(1, 10)
     
-    # On pose une question à l'utilisateur type "Quel est le résultat de 3x5 ?"
-    print("Quel est le résultat de " + str(a) + "x" + str(b) + " ?")
+    # On pose une question à l'utilisateur type "Quel est le résultat de 3x5 ?" et on récupère sa réponse dans la variable
+    # "answer"
+    answer = int(input("Quel est le résultat de " + str(a) + "x" + str(b) + " ? "))
     
-    # On demande à l'utilisateur de rentrer une réponse puis on détermine si il est égal au résultat du calcul
-    if int(input()) == a*b:
+    # On détermine si le résultat qu'il a donné est bien égal au résultat du calcul
+    if answer == a*b:
         # Si la réponse est correcte, on ajoute 1 au score
         score += 1
         print("Bravo ! Votre score est maintenant de " + str(score) + ".")
@@ -27,6 +29,7 @@ for loop in range(10):
         # Si la réponse est fausse, on soustrait 1 au score
         score -= 1
         print("Dommage ! La réponse était " + str(a*b) + ". Votre score est maintenant de " + str(score) + ".")
+    
     print("\n\nQuestion suivante !!\n")
 
 # Et ici on affiche une phrase de félicitation ou de réprimande selon le score du joueur
@@ -38,3 +41,6 @@ elif score <= 8:
     print("Pas mal !")
 else:
     print("Excellent !")
+
+# Formule de au revoir (pour la présentation)
+print("\n\n" + '{:━^61}'.format(''))

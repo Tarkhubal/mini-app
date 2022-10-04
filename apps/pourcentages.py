@@ -7,3 +7,6 @@ nbtotal = int(input("Quel est ton total ? "))
 
 # Calcul et impression à l'écran
 print("Ton résultat est de " + str((nbq / nbtotal) * 100) + "%")
+
+# Formule de au revoir (pour la présentation)
+print('{:━^61}'.format(''))
