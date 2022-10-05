@@ -4,7 +4,7 @@ print("\n\n" + '{:━^61}'.format(' Révisons nos tables de multiplication ! '))
 # Importation de bibliothèques
 from random import *
 
-# Initialisation des variables
+# On initialise les variables
 score = 0   # Score du joueur
 a = 0       # Nombre 1
 b = 0       # Nombre 2
@@ -16,8 +16,7 @@ for loop in range(10):
     a = randint(1, 10)
     b = randint(1, 10)
     
-    # On pose une question à l'utilisateur type "Quel est le résultat de 3x5 ?" et on récupère sa réponse dans la variable
-    # "answer"
+    # On pose une question à l'utilisateur type "Quel est le résultat de 3x5 ?" et on récupère sa réponse dans la variable "answer"
     answer = int(input("Quel est le résultat de " + str(a) + "x" + str(b) + " ? "))
     
     # On détermine si le résultat qu'il a donné est bien égal au résultat du calcul

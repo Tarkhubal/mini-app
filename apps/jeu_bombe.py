@@ -5,7 +5,7 @@ print("\n\n" + '{:━^61}'.format(' Bienvenue Agent 008 ! '))
 from random import *
 from time import *
 
-# Initialiser les variables
+# On initialise les variables
 
 # -- Variables communes au deux modes de jeu (par ordre d'apparition) :
 lvl_choice = 0      # Choix du niveau de difficulté
@@ -81,7 +81,6 @@ if nb_joueur == 1:
         if (user_co <= l_co_bombe_max and user_co >= l_co_bombe_min):
             # Si c'est compris dedans alors on affiche une phrase de bravo
             print("Bravo ! Vous avez trouvé la bombe !")
-            
             # Et on arrête la boucle
             break
         elif user_co == bombe:
@@ -119,37 +118,47 @@ elif nb_joueur == 2:
         user_co = int(input("Entrez un nombre entre 0 et 100 : "))
         
         if (user_co <= l_co_bombe_max and user_co >= l_co_bombe_min):
-            # Si le nombre qu'il a donné est compris dans l'interval de la bombes alors on affiche une phrase de bravo
+            # Si le nombre qu'il a donné est compris dans l'interval de la bombe alors on affiche une phrase de bravo
             print("Bravo joueur " + str(joueur_numero) + "! Tu as trouvé la bombe !")
             # Et on arrête la boucle
             break
         elif user_co == bombe:
-            print("Waouw quel sniper " + str(joueur_numero) + " ! Vous avez trouvé l'emplacement exact de la bombe !")
-            # Et on arrête la boucle
-            break
-        else: 
-            print("Raté joueur " + str(joueur_numero) + " ! Il te reste", str(essaie_1-1), "tentatives !")
-            essaie_1 -= 1
-        
-        joueur_numero = 2
-        print("\nJoueur " + str(joueur_numero) + ", prépare toi !\nOn y go !!")
-        user_co = int(input("Entrez un nombre entre 0 et 100 : "))
-        
-        if (user_co <= l_co_bombe_max and user_co >= l_co_bombe_min):
-            print("Bravo joueur " + str(joueur_numero) + "! Tu as trouvé la bombe !")
-            # Et on arrête la boucle
-            break
-        elif user_co == bombe:
+            # Si c'est égal on affiche une phrase (bon c'est pas nécessaire mais c'est drôle)
             print("Waouw quel sniper " + str(joueur_numero) + " ! Vous avez trouvé l'emplacement exact de la bombe !")
             # Et on arrête la boucle
             break
         else:
+            # Sinon on affiche le nombre d'essaies restants au joueur 1
+            print("Raté joueur " + str(joueur_numero) + " ! Il te reste", str(essaie_1-1), "tentatives !")
+            # Et on lui elève un essaie au joueur 1
+            essaie_1 -= 1
+        
+        # Tour du joueur 2
+        joueur_numero = 2
+        print("\nJoueur " + str(joueur_numero) + ", prépare toi !\nOn y go !!")
+        # On demande au joueur 2 de choisir un nombre entre 0 et 100 inclus
+        user_co = int(input("Entrez un nombre entre 0 et 100 : "))
+        
+        if (user_co <= l_co_bombe_max and user_co >= l_co_bombe_min):
+            # Si le nombre qu'il a donné est compris dans l'interval de la bombe alors on affiche une phrase de bravo
+            print("Bravo joueur " + str(joueur_numero) + "! Tu as trouvé la bombe !")
+            # Et on arrête la boucle
+            break
+        elif user_co == bombe:
+            # Si c'est égal on affiche une phrase (bon c'est pas nécessaire mais c'est drôle)
+            print("Waouw quel sniper " + str(joueur_numero) + " ! Vous avez trouvé l'emplacement exact de la bombe !")
+            # Et on arrête la boucle
+            break
+        else:
+            # Sinon on affiche le nombre d'essaies restants au joueur 2
             print("Raté joueur " + str(joueur_numero) + " ! Il te reste", str(essaie_2-1), "tentatives !")
+            # Et on enlève 1 essaie au joueur 2
             essaie_2 -= 1
         
     
         # Si les deux joueurs n'ont pas trouvé :
         if essaie_1 == 0 or essaie_2 == 0:
+            # On exécute la fonction explode() qui permet de "faire exploser" la bombe
             explode()
             # Et on arrête la boucle
             break

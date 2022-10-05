@@ -1,6 +1,6 @@
 {
     "apps": {
-        "dollar_can": {
+        "money_convert": {
             "app_id": 1,
             "name": "Convertisseur de devises monnetaire",
             "description": "Une petite application qui permet de créer un tableau de conversion entre différentes devises monnetaires !",
@@ -23,6 +23,30 @@
             "category": "Game",
             "menu_desc": "Jouer au jeu de la bombe !",
             "multiplayer": true
+        },
+        "nb_divisible_par_2": {
+            "app_id": 4,
+            "name": "Déterminer combien de fois un nombre est divisible par 2",
+            "description": "Et si on déterminait combien de fois un nombre est divisible par 2 ?",
+            "category": "Utility",
+            "menu_desc": "Déterminons combien de fois un nombre est divisible par 2 !",
+            "multiplayer": false
+        },
+        "pourcentages": {
+            "app_id": 5,
+            "name": "Déterminer un pourcentage",
+            "description": "Tu me donnes un nombre et son maximum, et je te donne son pourcentage !",
+            "category": "Utility",
+            "menu_desc": "Déterminons un pourcentage !",
+            "multiplayer": false
+        },
+        "reviseur_table_multi": {
+            "app_id": 6,
+            "name": "Réviseur de tables de multiplication",
+            "description": "Je vais t'aider à réviser tes tables de multiplication !",
+            "category": "Utility",
+            "menu_desc": "Révisons nos tables de multiplication !",
+            "multiplayer": false
         }
     }
 }

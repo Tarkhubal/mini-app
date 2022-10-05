@@ -1,4 +1,4 @@
-# On génère les variables
+# On initialise les variables
 prenom = 0          # Prénom de l'utilisateur
 nom = 0             # Nom de l'utilisateur
 annee_naissance = 0 # Année de naissance de l'utilisateur
