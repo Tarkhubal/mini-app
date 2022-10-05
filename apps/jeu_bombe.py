@@ -106,19 +106,26 @@ if nb_joueur == 1:
 
 # Mode deux joueurs
 elif nb_joueur == 2:
+    # On fixe les essaies des deux joueurs à 5
     essaie_1 = 5
     essaie_2 = 5
     
+    # On créé une boucle qui fonctionnera nb_joueur*2 fois
     for loop in range(nb_joueur * 2):
+        # Tour du joueur 1
         joueur_numero = 1
         print("\nJoueur " + str(joueur_numero) + ", prépare toi !\nC'est partiii !!")
+        # On demande au joueur 1 de choisir un nombre entre 0 et 100 inclus
         user_co = int(input("Entrez un nombre entre 0 et 100 : "))
         
         if (user_co <= l_co_bombe_max and user_co >= l_co_bombe_min):
+            # Si le nombre qu'il a donné est compris dans l'interval de la bombes alors on affiche une phrase de bravo
             print("Bravo joueur " + str(joueur_numero) + "! Tu as trouvé la bombe !")
+            # Et on arrête la boucle
             break
         elif user_co == bombe:
             print("Waouw quel sniper " + str(joueur_numero) + " ! Vous avez trouvé l'emplacement exact de la bombe !")
+            # Et on arrête la boucle
             break
         else: 
             print("Raté joueur " + str(joueur_numero) + " ! Il te reste", str(essaie_1-1), "tentatives !")
@@ -130,9 +137,11 @@ elif nb_joueur == 2:
         
         if (user_co <= l_co_bombe_max and user_co >= l_co_bombe_min):
             print("Bravo joueur " + str(joueur_numero) + "! Tu as trouvé la bombe !")
+            # Et on arrête la boucle
             break
         elif user_co == bombe:
             print("Waouw quel sniper " + str(joueur_numero) + " ! Vous avez trouvé l'emplacement exact de la bombe !")
+            # Et on arrête la boucle
             break
         else:
             print("Raté joueur " + str(joueur_numero) + " ! Il te reste", str(essaie_2-1), "tentatives !")
@@ -142,7 +151,9 @@ elif nb_joueur == 2:
         # Si les deux joueurs n'ont pas trouvé :
         if essaie_1 == 0 or essaie_2 == 0:
             explode()
+            # Et on arrête la boucle
             break
+    # On affiche la position de la bombe
     print("La bombe était placée en " + str(bombe) + " !")
 
 # Formule de au revoir (pour la présentation)
