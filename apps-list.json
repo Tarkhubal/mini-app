@@ -1,11 +1,11 @@
 {
     "apps": {
-        "money_convert": {
+        "can_dollar": {
             "app_id": 1,
-            "name": "Convertisseur de devises monnetaire",
-            "description": "Une petite application qui permet de créer un tableau de conversion entre différentes devises monnetaires !",
+            "name": "Convertisseur euros vers dollars canadiens",
+            "description": "Une petite application qui permet de créer un tableau de conversion entre les euros et les dollars canadiens !",
             "category": "Utility",
-            "menu_desc": "Générer un tableau de conversion de monnaies",
+            "menu_desc": "Convertisseur d'euros vers des dollars canadiens",
             "multiplayer": false
         },
         "age_calculator": {
