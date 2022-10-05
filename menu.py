@@ -9,8 +9,11 @@ for loop in range(50):
     user = 0
 
     print(bienvenue + "\n1 - Jouer au jeu de la bombe\n2 - Générer une présentation de toi\n3 - Trouver combien de fois un nombre est divisible par 2\n4 - Réviser tes tables de multiplication\n5 - Générer un tableau de conversion de monnaies\n6 - Calculons des pourcentages !\n9 - Quitter l'application")
-
+    
+    # On demande à l'utilisateur de choisir une option
     user = int(input("Rentre ici le numéro correspondant : "))
+    
+    # Et on importe les apps en fontion de l'option choisie
     if user == 1:
         from apps.jeu_bombe import *
     elif user == 2:
